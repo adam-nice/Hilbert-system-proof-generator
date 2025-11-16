@@ -1,0 +1,123 @@
+Starting proof generation at Sun Nov 16 23:02:44 2025
+Max Length: 3
+Basis Size: 5
+==============================
+
+--- Generating all Axiom instances (Length 1) ---
+Using WFF Basis (size 5): ['a', 'b', '(¬a)', '(a → a)', '(a → b)']
+
+Found 175 unique length-1 proofs.
+
+--- Searching for proofs up to length 3 ---
+Generating proofs of length 2 from 175 proofs of length 1...
+Found 30625 new unique proofs of length 2.
+Generating proofs of length 3 from 30625 proofs of length 2...
+Found 5359425 new unique proofs of length 3.
+
+--- Search Complete ---
+Found a total of 5390225 proofs (including non-minimal).
+Found 50 proofs of length 3 or more that use Modus Ponens.
+Filtering down to the simplest proof for each of 25 unique theorems...
+
+  1. ((a → a) → ((a → a) → (a → a)))                                                   A1 [A=(a → a), B=(a → a)]
+  2. (((a → a) → ((a → a) → (a → a))) → (((a → a) → (a → a)) → ((a → a) → (a → a))))   A2 [A=(a → a), B=(a → a), C=(a → a)]
+  3. (((a → a) → (a → a)) → ((a → a) → (a → a)))                                       MP (1,2)
+--------------------
+  1. ((a → a) → ((a → b) → (a → a)))                                                   A1 [A=(a → a), B=(a → b)]
+  2. (((a → a) → ((a → b) → (a → a))) → (((a → a) → (a → b)) → ((a → a) → (a → a))))   A2 [A=(a → a), B=(a → b), C=(a → a)]
+  3. (((a → a) → (a → b)) → ((a → a) → (a → a)))                                       MP (1,2)
+--------------------
+  1. ((a → a) → ((¬a) → (a → a)))                                                A1 [A=(a → a), B=(¬a)]
+  2. (((a → a) → ((¬a) → (a → a))) → (((a → a) → (¬a)) → ((a → a) → (a → a))))   A2 [A=(a → a), B=(¬a), C=(a → a)]
+  3. (((a → a) → (¬a)) → ((a → a) → (a → a)))                                    MP (1,2)
+--------------------
+  1. ((a → a) → (a → (a → a)))                                             A1 [A=(a → a), B=a]
+  2. (((a → a) → (a → (a → a))) → (((a → a) → a) → ((a → a) → (a → a))))   A2 [A=(a → a), B=a, C=(a → a)]
+  3. (((a → a) → a) → ((a → a) → (a → a)))                                 MP (1,2)
+--------------------
+  1. ((a → a) → (b → (a → a)))                                             A1 [A=(a → a), B=b]
+  2. (((a → a) → (b → (a → a))) → (((a → a) → b) → ((a → a) → (a → a))))   A2 [A=(a → a), B=b, C=(a → a)]
+  3. (((a → a) → b) → ((a → a) → (a → a)))                                 MP (1,2)
+--------------------
+  1. ((a → b) → ((a → a) → (a → b)))                                                   A1 [A=(a → b), B=(a → a)]
+  2. (((a → b) → ((a → a) → (a → b))) → (((a → b) → (a → a)) → ((a → b) → (a → b))))   A2 [A=(a → b), B=(a → a), C=(a → b)]
+  3. (((a → b) → (a → a)) → ((a → b) → (a → b)))                                       MP (1,2)
+--------------------
+  1. ((a → b) → ((a → b) → (a → b)))                                                   A1 [A=(a → b), B=(a → b)]
+  2. (((a → b) → ((a → b) → (a → b))) → (((a → b) → (a → b)) → ((a → b) → (a → b))))   A2 [A=(a → b), B=(a → b), C=(a → b)]
+  3. (((a → b) → (a → b)) → ((a → b) → (a → b)))                                       MP (1,2)
+--------------------
+  1. ((a → b) → ((¬a) → (a → b)))                                                A1 [A=(a → b), B=(¬a)]
+  2. (((a → b) → ((¬a) → (a → b))) → (((a → b) → (¬a)) → ((a → b) → (a → b))))   A2 [A=(a → b), B=(¬a), C=(a → b)]
+  3. (((a → b) → (¬a)) → ((a → b) → (a → b)))                                    MP (1,2)
+--------------------
+  1. ((a → b) → (a → (a → b)))                                             A1 [A=(a → b), B=a]
+  2. (((a → b) → (a → (a → b))) → (((a → b) → a) → ((a → b) → (a → b))))   A2 [A=(a → b), B=a, C=(a → b)]
+  3. (((a → b) → a) → ((a → b) → (a → b)))                                 MP (1,2)
+--------------------
+  1. ((a → b) → (b → (a → b)))                                             A1 [A=(a → b), B=b]
+  2. (((a → b) → (b → (a → b))) → (((a → b) → b) → ((a → b) → (a → b))))   A2 [A=(a → b), B=b, C=(a → b)]
+  3. (((a → b) → b) → ((a → b) → (a → b)))                                 MP (1,2)
+--------------------
+  1. ((¬a) → ((a → a) → (¬a)))                                          A1 [A=(¬a), B=(a → a)]
+  2. (((¬a) → ((a → a) → (¬a))) → (((¬a) → (a → a)) → ((¬a) → (¬a))))   A2 [A=(¬a), B=(a → a), C=(¬a)]
+  3. (((¬a) → (a → a)) → ((¬a) → (¬a)))                                 MP (1,2)
+--------------------
+  1. ((¬a) → ((a → b) → (¬a)))                                          A1 [A=(¬a), B=(a → b)]
+  2. (((¬a) → ((a → b) → (¬a))) → (((¬a) → (a → b)) → ((¬a) → (¬a))))   A2 [A=(¬a), B=(a → b), C=(¬a)]
+  3. (((¬a) → (a → b)) → ((¬a) → (¬a)))                                 MP (1,2)
+--------------------
+  1. ((¬a) → ((¬a) → (¬a)))                                       A1 [A=(¬a), B=(¬a)]
+  2. (((¬a) → ((¬a) → (¬a))) → (((¬a) → (¬a)) → ((¬a) → (¬a))))   A2 [A=(¬a), B=(¬a), C=(¬a)]
+  3. (((¬a) → (¬a)) → ((¬a) → (¬a)))                              MP (1,2)
+--------------------
+  1. ((¬a) → (a → (¬a)))                                    A1 [A=(¬a), B=a]
+  2. (((¬a) → (a → (¬a))) → (((¬a) → a) → ((¬a) → (¬a))))   A2 [A=(¬a), B=a, C=(¬a)]
+  3. (((¬a) → a) → ((¬a) → (¬a)))                           MP (1,2)
+--------------------
+  1. ((¬a) → (b → (¬a)))                                    A1 [A=(¬a), B=b]
+  2. (((¬a) → (b → (¬a))) → (((¬a) → b) → ((¬a) → (¬a))))   A2 [A=(¬a), B=b, C=(¬a)]
+  3. (((¬a) → b) → ((¬a) → (¬a)))                           MP (1,2)
+--------------------
+  1. (a → ((a → a) → a))                                 A1 [A=a, B=(a → a)]
+  2. ((a → ((a → a) → a)) → ((a → (a → a)) → (a → a)))   A2 [A=a, B=(a → a), C=a]
+  3. ((a → (a → a)) → (a → a))                           MP (1,2)
+--------------------
+  1. (a → ((a → b) → a))                                 A1 [A=a, B=(a → b)]
+  2. ((a → ((a → b) → a)) → ((a → (a → b)) → (a → a)))   A2 [A=a, B=(a → b), C=a]
+  3. ((a → (a → b)) → (a → a))                           MP (1,2)
+--------------------
+  1. (a → ((¬a) → a))                              A1 [A=a, B=(¬a)]
+  2. ((a → ((¬a) → a)) → ((a → (¬a)) → (a → a)))   A2 [A=a, B=(¬a), C=a]
+  3. ((a → (¬a)) → (a → a))                        MP (1,2)
+--------------------
+  1. (a → (a → a))                           A1 [A=a, B=a]
+  2. ((a → (a → a)) → ((a → a) → (a → a)))   A2 [A=a, B=a, C=a]
+  3. ((a → a) → (a → a))                     MP (1,2)
+--------------------
+  1. (a → (b → a))                           A1 [A=a, B=b]
+  2. ((a → (b → a)) → ((a → b) → (a → a)))   A2 [A=a, B=b, C=a]
+  3. ((a → b) → (a → a))                     MP (1,2)
+--------------------
+  1. (b → ((a → a) → b))                                 A1 [A=b, B=(a → a)]
+  2. ((b → ((a → a) → b)) → ((b → (a → a)) → (b → b)))   A2 [A=b, B=(a → a), C=b]
+  3. ((b → (a → a)) → (b → b))                           MP (1,2)
+--------------------
+  1. (b → ((a → b) → b))                                 A1 [A=b, B=(a → b)]
+  2. ((b → ((a → b) → b)) → ((b → (a → b)) → (b → b)))   A2 [A=b, B=(a → b), C=b]
+  3. ((b → (a → b)) → (b → b))                           MP (1,2)
+--------------------
+  1. (b → ((¬a) → b))                              A1 [A=b, B=(¬a)]
+  2. ((b → ((¬a) → b)) → ((b → (¬a)) → (b → b)))   A2 [A=b, B=(¬a), C=b]
+  3. ((b → (¬a)) → (b → b))                        MP (1,2)
+--------------------
+  1. (b → (a → b))                           A1 [A=b, B=a]
+  2. ((b → (a → b)) → ((b → a) → (b → b)))   A2 [A=b, B=a, C=b]
+  3. ((b → a) → (b → b))                     MP (1,2)
+--------------------
+  1. (b → (b → b))                           A1 [A=b, B=b]
+  2. ((b → (b → b)) → ((b → b) → (b → b)))   A2 [A=b, B=b, C=b]
+  3. ((b → b) → (b → b))                     MP (1,2)
+--------------------
+
+Total execution time: 32.0577 seconds.
