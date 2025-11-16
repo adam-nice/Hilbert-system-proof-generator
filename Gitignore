@@ -1,0 +1,14 @@
+Python cache
+
+pycache/
+*.py[cod]
+
+Output files
+
+proof_output.txt
+
+Environment
+
+.env
+.venv
+venv/
