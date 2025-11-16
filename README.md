@@ -54,7 +54,7 @@ Ensure you have Python 3.x installed.
 
 Run the script from your terminal:
 
-python generate_proofs.py
+python formal_proof_printer.py
 
 
 The script will print its progress to the console and may take several minutes to run, as the search is computationally intensive.
